@@ -1,8 +1,11 @@
 def fibonacci(n):
-    result = [0,1]
-    for i in range(1, n-1):
-        result.append(result[i]+result[i-1])
-    return result
+    if n>0:
+        result = [0,1]
+        for i in range(1, n-1):
+            result.append(result[i]+result[i-1])
+        return result
+    else:
+        raise IndexError
 def bubbleSort(array):
     for i in range(len(array) - 1):
         for j in range(len(array) - i - 1):
